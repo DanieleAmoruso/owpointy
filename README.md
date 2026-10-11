@@ -29,7 +29,7 @@ Contains the core analytical pipeline and interactive CLI orchestration:
 * **`parse_numeric_val(text)`**: A helper utility powered by regular expressions (`re`) that extracts integer and floating-point values from strings, stripping away measurement units (such as `cm` or `mm`).
 * **`check_trait_match(cell_value, query_value)`**: Evaluates user input against database entries. It supports exact matching, multi-state polymorphic cells delimited by slashes (e.g., `violet/purple`), and continuous numerical range evaluations (e.g., verifying if `15` falls within `10-20 cm`).
 * **`filter_taxa(dataset, feature, query_value)`**: Evaluates candidate taxa against user choices. If the user answers `unknown`, no filtering is applied to preserve active candidates.
-* **`calculate_confidence(matches_count, answered_steps, total_steps)`**: Generates a deterministic confidence percentage ($0.0\% - 100.0\%$). It rewards comprehensive diagnostic inputs while penalizing unresolved ambiguity if multiple taxa match the final trait set.
+* **`calculate_confidence(matches_count, answered_steps, total_steps)`**: Generates a deterministic confidence percentage (0.0\% - 100.0\%). It rewards comprehensive diagnostic inputs while penalizing unresolved ambiguity if multiple taxa match the final trait set.
 * **`get_sorted_features(sample_row)`**: Inspects dataset headers dynamically, excludes non-diagnostic metadata (such as species names and width metrics), and orders the remaining columns according to the defined botanical hierarchy.
 * **`main()`**: Displays the ASCII cladode banner, guides the user through the diagnostic sequence, validates input choices, and generates a structured Diagnostic Report.
 
